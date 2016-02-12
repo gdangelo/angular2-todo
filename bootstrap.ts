@@ -1,5 +1,5 @@
 import { bootstrap } from 'angular2/platform/browser';
-import { TodoApp } from './todo_app';
+import { TodoApp } from './todoapp'
 
 bootstrap(TodoApp)
   .catch(err => console.log(err));
