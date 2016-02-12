@@ -1,0 +1,35 @@
+{
+  "name": "angular2-todo",
+  "version": "1.0.0",
+  "description": "A Simple Todo App Written in Angular2 and TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gdangelo/angular2-todo.git"
+  },
+  "keywords": [
+    "Angular2",
+    "TypeScript",
+    "ES6",
+    "ES2015",
+    "JS",
+    "Todo"
+  ],
+  "author": "Grégory D'Angelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gdangelo/angular2-todo/issues"
+  },
+  "homepage": "https://github.com/gdangelo/angular2-todo",
+  "dependencies": {
+    "angular2": "^2.0.0-beta.6",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.13",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.0",
+    "zone.js": "^0.5.14"
+  }
+}
