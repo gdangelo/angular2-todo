@@ -3,12 +3,12 @@ import { TodoItem } from './todo_item';
 
 @Component({
   selector: 'todo-list',
-  directives: [TodoItem],
   template: `
     <ul>
       <todo-item *ngFor="#todo of todos" [todo]="todo"></todo-item>
     <ul>
-  `
+  `,
+  directives: [TodoItem]
 })
 export class TodoList {
   public todos: Array<any>;

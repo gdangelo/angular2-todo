@@ -12,7 +12,5 @@ export class TodoItem {
 
   @Input() todo: Object;
 
-  constructor() {
-
-  }
+  constructor() {}
 }
