@@ -1,5 +1,6 @@
 import { Component } from 'angular2/core';
 import { TodoItem } from './todo_item';
+import { TodoService, Todo } from '../services/todo_service';
 
 @Component({
   selector: 'todo-list',
@@ -11,20 +12,9 @@ import { TodoItem } from './todo_item';
   directives: [TodoItem]
 })
 export class TodoList {
-  public todos: Array<any>;
+  public todos: Array<Todo>;
 
-  constructor() {
-    this.todos = TODOS;
+  constructor(private _todoService: TodoService) {
+    this.todos = this._todoService.list();
   }
 }
-
-var TODOS = [
-  {
-    content: 'todo 1',
-    done: true
-  },
-  {
-    content: 'todo 2',
-    done: false
-  }
-]

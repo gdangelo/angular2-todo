@@ -4,7 +4,7 @@ import { Component, Input } from 'angular2/core';
   selector: 'todo-item',
   template: `
     <li>
-      {{todo.content}}
+      {{todo.text}}
     </li>
   `
 })
