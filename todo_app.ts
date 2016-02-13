@@ -1,5 +1,5 @@
 import { Component } from 'angular2/core';
-import { TodoList } from './todolist';
+import { TodoList } from './todo_list';
 
 @Component({
   selector: 'todo-app',
@@ -11,6 +11,6 @@ import { TodoList } from './todolist';
 })
 export class TodoApp {
   constructor() {
-    
+
   }
 }

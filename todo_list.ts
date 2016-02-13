@@ -1,5 +1,5 @@
 import { Component } from 'angular2/core';
-import { TodoItem } from './todoitem';
+import { TodoItem } from './todo_item';
 
 @Component({
   selector: 'todo-list',
