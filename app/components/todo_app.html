@@ -1,0 +1,12 @@
+<section class="todoapp">
+  <header>
+    <input class="new-todo" placeholder="Type to add a new task" [(ngModel)]="newItem" (keyup.enter)="addTodoItem()">
+  </header>
+  <section>
+    <todo-list></todo-list>
+  </section>
+  <footer *ngIf="itemsCount > 0">
+    <span class="itemsRemaining"><strong>{{itemsRemaining}}</strong> {{itemsRemaining > 1 ? 'items' : 'item'}} left</span>
+    <button class="clear-completed" *ngIf="itemsCompleted > 0" (click)="removeCompleted()">Clear completed</button>
+  </footer>
+</section>

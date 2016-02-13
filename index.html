@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Angular 2 Todo App</title>
+    <title>Angular2 - Todo App</title>
 
     <!-- 1. Load libraries -->
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
@@ -26,7 +26,16 @@
 
   <!-- 3. Display the application -->
   <body>
-    <todo-app>Loading...</todo-app>
+    <div class="container">
+      <header class="page-header">
+        <h1>Todo List</h1>
+      </header>
+      <todo-app></todo-app>
+      <footer>
+        <p>Created by <a href="https://github.com/gdangelo">Grégory D'Angelo</a> using Angular2 and TypeScript</p>
+        <p>Learn how to create this app from scratch with the <a href="http://eloquentwebapp.com/blog">EloquentWebApp.com tutorial</a></p>
+      </footer>
+    </div>
   </body>
 
 </html>

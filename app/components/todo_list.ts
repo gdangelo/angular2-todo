@@ -5,7 +5,7 @@ import { TodoService, Todo } from '../services/todo_service';
 @Component({
   selector: 'todo-list',
   template: `
-    <ul>
+    <ul class="todo-list">
       <todo-item *ngFor="#todo of todos" [todo]="todo"></todo-item>
     <ul>
   `,

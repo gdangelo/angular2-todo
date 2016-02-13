@@ -1,14 +1,37 @@
 import { Component } from 'angular2/core';
 import { TodoList } from './todo_list';
+import { TodoService } from '../services/todo_service';
 
 @Component({
   selector: 'todo-app',
-  template: `
-    <h1>Angular 2 Todo App</h1>
-    <todo-list></todo-list>
-  `,
+  templateUrl: 'app/components/todo_app.html',
   directives: [TodoList],
 })
 export class TodoApp {
-  constructor() {}
+  newItem: String = '';
+
+  constructor(private _todoService: TodoService) {}
+
+  addTodoItem() {
+    if (this.newItem.trim().length > 0){
+      this._todoService.add(this.newItem);
+      this.newItem = '';
+    }
+  }
+
+  removeCompleted() {
+    this._todoService.removeCompleted();
+  }
+
+  get itemsCount() {
+    return this._todoService.list().length;
+  }
+
+  get itemsRemaining() {
+    return this._todoService.getRemaining().length;
+  }
+
+  get itemsCompleted() {
+    return this._todoService.getCompleted().length;
+  }
 }

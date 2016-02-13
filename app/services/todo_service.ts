@@ -19,16 +19,39 @@ export class Todo {
 
 @Injectable()
 export class TodoService {
-  todos: Array<Todo>;
+  private todos: Array<Todo> = [];
 
-  constructor() {
-    this.todos = [
-      new Todo('Learn Angular2'),
-      new Todo('Build app with Angular2')
-    ]
+  constructor() {}
+
+  private getItems(completed: Boolean) {
+    return this.todos.filter((todo: Todo) => todo.completed === completed);
   }
 
   list() {
     return this.todos;
+  }
+
+  getRemaining() {
+    return this.getItems(false);
+  }
+
+  getCompleted() {
+    return this.getItems(true);
+  }
+
+  add(text: String) {
+    this.todos.push(new Todo(text));
+  }
+
+  remove(todo: Todo) {
+    this.todos.splice(this.todos.indexOf(todo), 1);
+  }
+
+  removeCompleted() {
+    this.todos = this.getRemaining();
+  }
+
+  toggleCompletion(todo: Todo) {
+    todo.completed = !todo.completed;
   }
 }
