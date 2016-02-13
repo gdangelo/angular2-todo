@@ -1,4 +1,4 @@
-import { Component } from 'angular2/core';
+import { Component, Input } from 'angular2/core';
 import { TodoItem } from './todo_item';
 import { TodoService, Todo } from '../services/todo_service';
 
@@ -12,7 +12,7 @@ import { TodoService, Todo } from '../services/todo_service';
   directives: [TodoItem]
 })
 export class TodoList {
-  public todos: Array<Todo>;
+  todos: Array<Todo>;
 
   constructor(private _todoService: TodoService) {
     this.todos = this._todoService.list();

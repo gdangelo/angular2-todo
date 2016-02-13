@@ -1,4 +1,3 @@
-import { Injectable } from 'angular2/core';
 
 export class Todo {
   completed: Boolean;
@@ -17,11 +16,12 @@ export class Todo {
 	}
 }
 
-@Injectable()
 export class TodoService {
-  private todos: Array<Todo> = [];
+  private todos: Array<Todo>;
 
-  constructor() {}
+  constructor() {
+    this.todos = [];
+  }
 
   private getItems(completed: Boolean) {
     return this.todos.filter((todo: Todo) => todo.completed === completed);
@@ -56,7 +56,10 @@ export class TodoService {
   }
 
   removeCompleted() {
-    this.todos = this.getRemaining();
+    let tmp = this.getRemaining();
+
+    this.todos.length = 0;
+    tmp.forEach(item => this.todos.push(item));
   }
 
   toggleCompletion(todo: Todo) {
