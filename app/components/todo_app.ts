@@ -23,6 +23,14 @@ export class TodoApp {
     this._todoService.removeCompleted();
   }
 
+  allCompleted() {
+    this._todoService.allCompleted();
+  }
+
+  setAllTo(completed: Boolean) {
+    this._todoService.setAllTo(completed);
+  }
+
   get itemsCount() {
     return this._todoService.list().length;
   }

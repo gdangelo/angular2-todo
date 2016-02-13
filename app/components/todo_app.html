@@ -3,9 +3,10 @@
     <input class="new-todo" placeholder="Type to add a new task" [(ngModel)]="newItem" (keyup.enter)="addTodoItem()">
   </header>
   <section>
+    <input class="toggle-all" type="checkbox" *ngIf="itemsCount" #toggleall [checked]="allCompleted()" (click)="setAllTo(toggleall.checked)">
     <todo-list></todo-list>
   </section>
-  <footer *ngIf="itemsCount > 0">
+  <footer *ngIf="itemsCount">
     <span class="itemsRemaining"><strong>{{itemsRemaining}}</strong> {{itemsRemaining > 1 ? 'items' : 'item'}} left</span>
     <button class="clear-completed" *ngIf="itemsCompleted > 0" (click)="removeCompleted()">Clear completed</button>
   </footer>

@@ -39,6 +39,14 @@ export class TodoService {
     return this.getItems(true);
   }
 
+  allCompleted() {
+    return this.todos.length === this.getCompleted().length;
+  }
+
+  setAllTo(completed: Boolean) {
+    this.todos.forEach((todo: Todo) => todo.completed = completed);
+  }
+
   add(text: String) {
     this.todos.push(new Todo(text));
   }
