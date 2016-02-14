@@ -4,6 +4,10 @@ body {
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+img {
+  width: 400px;
+}
+
 button {
 	margin: 0;
 	padding: 0;
@@ -138,6 +142,22 @@ label[for='toggle-all'] {
 	border-bottom: 1px solid #ededed;
 }
 
+.todo-list li.editing {
+	border-bottom: none;
+	padding: 0;
+}
+
+.todo-list li.editing .edit {
+	display: block;
+	width: 477px;
+	padding: 13px 17px 12px 17px;
+	margin: 0 0 0 43px;
+}
+
+.todo-list li.editing .view {
+	display: none;
+}
+
 .todo-list li .toggle {
 	text-align: center;
 	width: 40px;
@@ -199,10 +219,6 @@ label[for='toggle-all'] {
 
 .todo-list li:hover .delete {
 	display: block;
-}
-
-.todo-list li .edit {
-	display: none;
 }
 
 .todoapp footer {

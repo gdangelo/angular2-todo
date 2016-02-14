@@ -1,6 +1,7 @@
 
 export class Todo {
   completed: Boolean;
+  editing: Boolean;
 
 	private _text: String;
 	get text() {
@@ -18,8 +19,12 @@ export class Todo {
 
 export class TodoService {
   private todos: Array<Todo>;
+  //private firebaseUrl: String;
+  //private tasksRef: Firebase;
 
   constructor() {
+    //this.firebaseUrl = "https://angular2-fire-todo.firebaseio.com/";
+    //this.tasksRef = new Firebase(this.firebaseUrl);
     this.todos = [];
   }
 
