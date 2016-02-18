@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-var ENV = process.env.ENV = 'development';
+var ENV = process.env.ENV = 'production';
 var HOST = process.env.HOST || 'localhost';
 var PORT = process.env.PORT || 8080;
 
@@ -21,7 +21,7 @@ module.exports = {
   // Emit SourceMap to enhance debugging
   devtool: 'source-map',
   // Switch loaders to debug mode
-  debug: true,
+  debug: false,
 
   // Our angular app
   entry: {

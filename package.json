@@ -4,8 +4,12 @@
   "description": "A Simple Todo App Written in Angular2 and TypeScript",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --progress --colors",
-    "server": "webpack-dev-server --hot --progress --colors --content-base src/",
+    "build": "npm run build:dev",
+    "build:dev": "webpack --progress --colors",
+    "build:prod": "webpack --config webpack.prod.config.js --progress --colors",
+    "server": "npm run server:dev",
+    "server:dev": "webpack-dev-server --hot --progress --colors --content-base src/",
+    "server:prod": "http-server dist/ --cors",
     "start": "npm run server"
   },
   "repository": {
@@ -38,6 +42,7 @@
   "devDependencies": {
     "copy-webpack-plugin": "^1.1.1",
     "html-webpack-plugin": "^2.9.0",
+    "http-server": "^0.8.5",
     "raw-loader": "^0.5.1",
     "ts-loader": "^0.8.1",
     "typescript": "^1.7.5",
