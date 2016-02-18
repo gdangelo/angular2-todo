@@ -4,7 +4,7 @@ import { TodoService } from '../services/todo_service';
 
 @Component({
   selector: 'todo-app',
-  templateUrl: 'app/components/todo_app.html',
+  template: require('./todo_app.html'),
   directives: [TodoList],
 })
 export class TodoApp {

@@ -10,6 +10,18 @@
         "rootDir": "."
     },
     "exclude": [
-        "node_modules"
-    ]
+        "node_modules",
+        "typings/main.d.ts",
+        "typings/main"
+    ],
+    "filesGlob": [
+        "./src/**/*.ts",
+        "!./node_modules/**/*.ts",
+        "typings/browser.d.ts"
+    ],
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "atom": {
+        "rewriteTsconfig": false
+    }
 }
